@@ -4,7 +4,8 @@
 #  Author     : Radhakrishnan Rk
 #  Date       : 10/10/2016
 #  Last Edited: 10/10/2016, Radhakrishnan Rk
-#  Description: Bash script to determine os distribution and release version
+#  Description: Bash script to determine os distribution
+#               and release version
 #  Usage      : bash os.sh
 ##############################################################
 if [ -f /etc/redhat-release ]; then
