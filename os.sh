@@ -1,6 +1,6 @@
 #!/bin/bash
 ##############################################################
-#  title      : os.sh
+#  Title      : os.sh
 #  Author     : Radhakrishnan Rk
 #  Date       : 10/10/2016
 #  Last Edited: 10/10/2016, Radhakrishnan Rk
