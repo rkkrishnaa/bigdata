@@ -55,7 +55,7 @@ fi
 if [ $DISTRO == "Ubuntu" ]
 then
 	apt-get install apg
-    a=$(apg -a 1 -n 1 -M sncl -m $minlength -x $maxlength)
+        a=$(apg -a 1 -n 1 -M sncl -m $minlength -x $maxlength)
 	echo $a
 	echo ''$username':'$a'' | chpasswd
 else
