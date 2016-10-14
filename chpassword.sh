@@ -2,8 +2,8 @@
 #######################################################################################
 #  Title      : chpassword.sh
 #  Author     : Radhakrishnan Rk
-#  Date       : 10/10/2016
-#  Last Edited: 10/10/2016, Radhakrishnan Rk
+#  Date       : 14/10/2016
+#  Last Edited: 14/10/2016, Radhakrishnan Rk
 #  Description: Bash script to set secured password for linux user 
 #  Usage      : bash chpassword.sh --username krishnaa --minlength 16 --maxlength 16
 ########################################################################################
