@@ -1,0 +1,23 @@
+#{{ ansible_managed }}
+
+#!/usr/bin/env bash
+
+JAVA_HOME={{ java_home }}
+PYSPARK_PYTHON=python2.7
+PYSPARK_DRIVER_PYTHON=$PYSPARK_PYTHON
+SPARKR_DRIVER_R=R
+
+HADOOP_HOME={{ hadoop_home }}
+YARN_HOME={{ yarn_home }}
+HADOOP_CONF_DIR={{ hadoop_conf_dir }}
+YARN_CONF_DIR={{ yarn_conf_dir }}
+
+SPARK_EXECUTOR_INSTANCES={{ spark_executor_instances }}
+SPARK_EXECUTOR_CORES={{ spark_executor_cores }}
+SPARK_EXECUTOR_MEMORY={{ spark_executor_memory }}
+SPARK_DRIVER_MEMORY={{ spark_driver_memory }}
+
+SPARK_HOME={{ spark_home }}
+SPARK_CONF_DIR={{ spark_conf_dir }}
+SPARK_LOG_DIR={{ spark_log_dir }}
+SPARK_PID_DIR={{ spark_pid_dir }}

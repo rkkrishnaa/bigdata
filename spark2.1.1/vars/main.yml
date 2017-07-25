@@ -1,0 +1,45 @@
+---
+# vars file for spark2.1.1
+
+ansible_managed: This file is managed by Ansible, all changes will be lost
+
+#spark env
+java_home: /usr/local/jdk
+hadoop_home: /opt/cloudera/parcels/CDH/lib/hadoop
+hadoop_conf_dir: /opt/cloudera/parcels/CDH/lib/hadoop/etc/hadoop
+yarn_home: /opt/cloudera/parcels/CDH/lib/hadoop-yarn
+yarn_conf_dir: /opt/cloudera/parcels/CDH/lib/hadoop-yarn/etc/hadoop
+spark_executor_instances: 1
+spark_executor_cores: 1
+spark_executor_memory: 1G
+spark_driver_memory: 1G
+spark_home: /usr/local/spark
+spark_conf_dir: /usr/local/spark/conf
+spark_log_dir: /usr/local/spark/log
+spark_pid_dir: /usr/local/spark/pid
+
+#spark defaults
+spark_master: yarn
+spark_dynamicAllocation_enabled: true
+spark_shuffle_service_enabled: true
+spark_eventLog_dir: hdfs://nscloudlab/user/spark/application
+spark_eventLog_enabled: true
+spark_history_fs_logDirectory: hdfs://nscloudlab/user/spark/application
+spark_history_ui_port: 18080
+spark_yarn_historyServer_address: 10.0.4.4:18080
+spark_yarn_am_memory: 512m
+spark_yarn_am_cores: 1
+spark_yarn_driver_memoryOverhead: 384
+spark_yarn_executor_memoryOverhead: 384
+
+#spark thrift server
+spark_scheduler_allocation_file: /usr/local/spark/conf/fairscheduler.xml
+
+#spark fair scheduler
+fair_scheduler_weight: 1
+fair_scheduler_minShare: 2
+
+#spark log4j
+loglevel: ERROR
+
+

@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  user: ceadmin
+  become: yes
+  become_method: sudo
+  roles:
+    - spark2.1.1

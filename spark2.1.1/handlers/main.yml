@@ -1,0 +1,12 @@
+---
+# handlers file for spark2.1.1
+- name: stop history server
+  shell: /usr/local/spark/sbin/stop-history-server.sh
+  become: true
+  become_user: spark	
+  listen: "restart spark history server"
+- name: start history server
+  shell: /usr/local/spark/sbin/start-history-server.sh
+  become: true
+  become_user: spark
+  listen: "restart spark history server"

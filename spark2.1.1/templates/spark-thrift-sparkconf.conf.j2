@@ -1,0 +1,17 @@
+#{{ ansible_managed }}
+
+spark.dynamicAllocation.enabled true
+spark.dynamicAllocation.initialExecutors 0
+spark.dynamicAllocation.maxExecutors 10
+spark.dynamicAllocation.minExecutors 0
+spark.eventLog.dir {{ spark_eventLog_dir }}
+spark.eventLog.enabled true
+spark.executor.memory 1g
+spark.history.fs.logDirectory {{ spark_history_fs_logDirectory }}
+spark.history.provider org.apache.spark.deploy.history.FsHistoryProvider
+spark.master yarn-client
+spark.scheduler.allocation.file {{ spark_scheduler_allocation_file }}
+spark.scheduler.mode FAIR
+spark.shuffle.service.enabled true
+spark.yarn.am.memory 512m
+spark.yarn.queue default
