@@ -5,7 +5,7 @@
   notify: "restart spark history server"
   template: " 
   src=templates/spark-env.sh.j2 
-  dest=/usr/local/spark/spark-env.sh 
+  dest=/usr/local/spark/conf/spark-env.sh 
   owner=spark 
   group=spark 
   backup=yes 
@@ -17,7 +17,7 @@
   notify: "restart spark history server"
   template: " 
   src=templates/spark-defaults.conf.j2 
-  dest=/usr/local/spark/spark-defaults.conf 
+  dest=/usr/local/spark/conf/spark-defaults.conf 
   owner=spark 
   group=spark 
   backup=yes 
@@ -29,7 +29,7 @@
   notify: "restart spark history server"
   template: " 
   src=templates/spark-thrift-sparkconf.conf.j2 
-  dest=/usr/local/spark/spark-thrift-sparkconf.conf 
+  dest=/usr/local/spark/conf/spark-thrift-sparkconf.conf 
   owner=spark 
   group=spark 
   backup=yes 
@@ -41,7 +41,7 @@
   notify: "restart spark history server"
   template: " 
   src=templates/fairscheduler.xml.j2 
-  dest=/usr/local/spark/fairscheduler.xml 
+  dest=/usr/local/spark/conf/fairscheduler.xml 
   owner=spark 
   group=spark 
   backup=yes 
@@ -53,7 +53,7 @@
   notify: "restart spark history server"
   template: " 
   src=templates/log4j.properties.j2 
-  dest=/usr/local/spark/log4j.properties 
+  dest=/usr/local/spark/conf/log4j.properties 
   owner=spark 
   group=spark 
   backup=yes 
