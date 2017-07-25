@@ -1,57 +1,62 @@
 ---
 # tasks file for spark2.1.1
-
--name: Configure spark env
- template:
- src: /templates/spark-env.sh.j2
- dest: /usr/local/spark/spark-env.sh
- owner: spark
- group: spark
- mode: "u=rwx,g=rx,o=r"
- backup: yes
- force: yes
- notify: "restart spark history server"
-
--name: Configure spark defaults
- template:
- src: /templates/spark-defaults.conf.j2
- dest: /usr/local/spark/spark-defaults.conf
- owner: spark
- group: spark
- mode: "u=rwx,g=rx,o=r"
- backup: yes
- force: yes
- notify: "restart spark history server"
-		
--name: Configure spark thrift server
- template:
- src: /templates/spark-thrift-sparkconf.conf.j2
- dest: /usr/local/spark/spark-thrift-sparkconf.conf
- owner: spark
- group: spark
- mode: "u=rwx,g=rx,o=r"
- backup: yes
- force: yes
- notify: "restart spark history server"
-		
--name: Configure spark fair scheduler
- template:
- src: /templates/fairscheduler.xml.j2
- dest: /usr/local/spark/fairscheduler.xml
- owner: spark
- group: spark
- mode: "u=rwx,g=rx,o=r"
- backup: yes
- force: yes
- notify: "restart spark history server"
-		
--name: Configure spark log4j 
- template:
- src: /templates/log4j.properties.j2
- dest: /usr/local/spark/log4j.properties
- owner: spark
- group: spark
- mode: "u=rwx,g=rx,o=r"
- backup: yes
- force: yes
- notify: "restart spark history server"
+- 
+  name: "configure spark env"
+  notify: "restart spark history server"
+  template: " 
+  src=templates/spark-env.sh.j2 
+  dest=/usr/local/spark/spark-env.sh 
+  owner=spark 
+  group=spark 
+  backup=yes 
+  force=yes 
+  mode='0644' 
+  "
+- 
+  name: "configure spark defaults"
+  notify: "restart spark history server"
+  template: " 
+  src=templates/spark-defaults.conf.j2 
+  dest=/usr/local/spark/spark-defaults.conf 
+  owner=spark 
+  group=spark 
+  backup=yes 
+  force=yes 
+  mode='0644' 
+  "
+- 
+  name: "configure spark thrift server"
+  notify: "restart spark history server"
+  template: " 
+  src=templates/spark-thrift-sparkconf.conf.j2 
+  dest=/usr/local/spark/spark-thrift-sparkconf.conf 
+  owner=spark 
+  group=spark 
+  backup=yes 
+  force=yes 
+  mode='0644' 
+  "
+- 
+  name: "configure spark fair scheduler"
+  notify: "restart spark history server"
+  template: " 
+  src=templates/fairscheduler.xml.j2 
+  dest=/usr/local/spark/fairscheduler.xml 
+  owner=spark 
+  group=spark 
+  backup=yes 
+  force=yes 
+  mode='0644' 
+  "
+- 
+  name: "configure spark log4j"
+  notify: "restart spark history server"
+  template: " 
+  src=templates/log4j.properties.j2 
+  dest=/usr/local/spark/log4j.properties 
+  owner=spark 
+  group=spark 
+  backup=yes 
+  force=yes 
+  mode='0644' 
+  "
